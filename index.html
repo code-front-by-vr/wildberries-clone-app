@@ -3,8 +3,331 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wildberries-clone-app</title>
+    <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon" />
+    <title>
+      Интернет-магазин Fake-Wildberries: широкий ассортимент товаров - скидки каждый день!
+    </title>
     <script type="module" src="./src/js/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container header__wrapper">
+        <div class="header__logo">
+          <a href="#"><img src="./icons/wildberries-logo.svg" alt="wildberries-logo" /></a>
+        </div>
+        <div class="header__search-container">
+          <form class="d-flex">
+            <input
+              class="header__search"
+              type="search"
+              placeholder="Найти на Fake-Wildberries..."
+              aria-label="Search"
+            />
+          </form>
+        </div>
+        <div class="basket">
+          <a href="#" class="basket__link" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <img src="./icons/basket-icon.svg" alt="basket-icon" />
+            <span>Корзина</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main-page">
+      <div class="container">
+        <div class="main-page__slider swiper">
+          <!-- additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="swiper-slide__image">
+                <img src="./images/slider_1.webp" alt="slider_1" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__image">
+                <img src="./images/slider_2.webp" alt="slider_2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__image">
+                <img src="./images/slider_3.webp" alt="slider_3" />
+              </div>
+            </div>
+          </div>
+          <!--  pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!--  navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+        <div class="main-page__content-wrapper">
+          <div class="main-page__content">
+            <article class="main-page__product product-card">
+              <div class="product-card__wrapper">
+                <div class="product-card__img">
+                  <div class="product-card__img-wrapper">
+                    <img src="./images/product-img.png" alt="product-img" />
+                  </div>
+                  <button
+                    class="product-card__button product-card__button--preview"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Быстрый просмотр
+                  </button>
+                  <span class="product-card__discount">-15%</span>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__prices">
+                    <div class="product-card__prices-new">15.99р</div>
+                    <div class="product-card__prices-old">25.90р</div>
+                  </div>
+                  <h5 class="product-card__title">Название товара</h5>
+                  <button class="product-card__buy">В корзину</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="main-page__product product-card">
+              <div class="product-card__wrapper">
+                <div class="product-card__img">
+                  <div class="product-card__img-wrapper">
+                    <img src="./images/product-img.png" alt="product-img" />
+                  </div>
+                  <button
+                    class="product-card__button product-card__button--preview"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Быстрый просмотр
+                  </button>
+                  <span class="product-card__discount">-15%</span>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__prices">
+                    <div class="product-card__prices-new">15.99р</div>
+                    <div class="product-card__prices-old">25.90р</div>
+                  </div>
+                  <h5 class="product-card__title">Название товара</h5>
+                  <button class="product-card__buy">В корзину</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="main-page__product product-card">
+              <div class="product-card__wrapper">
+                <div class="product-card__img">
+                  <div class="product-card__img-wrapper">
+                    <img src="./images/product-img.png" alt="product-img" />
+                  </div>
+                  <button
+                    class="product-card__button product-card__button--preview"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Быстрый просмотр
+                  </button>
+                  <span class="product-card__discount">-15%</span>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__prices">
+                    <div class="product-card__prices-new">15.99р</div>
+                    <div class="product-card__prices-old">25.90р</div>
+                  </div>
+                  <h5 class="product-card__title">Название товара</h5>
+                  <button class="product-card__buy">В корзину</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="main-page__product product-card">
+              <div class="product-card__wrapper">
+                <div class="product-card__img">
+                  <div class="product-card__img-wrapper">
+                    <img src="./images/product-img.png" alt="product-img" />
+                  </div>
+                  <button
+                    class="product-card__button product-card__button--preview"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Быстрый просмотр
+                  </button>
+                  <span class="product-card__discount">-15%</span>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__prices">
+                    <div class="product-card__prices-new">15.99р</div>
+                    <div class="product-card__prices-old">25.90р</div>
+                  </div>
+                  <h5 class="product-card__title">Название товара</h5>
+                  <button class="product-card__buy">В корзину</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="main-page__product product-card">
+              <div class="product-card__wrapper">
+                <div class="product-card__img">
+                  <div class="product-card__img-wrapper">
+                    <img src="./images/product-img.png" alt="product-img" />
+                  </div>
+                  <button
+                    class="product-card__button product-card__button--preview"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Быстрый просмотр
+                  </button>
+                  <span class="product-card__discount">-15%</span>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__prices">
+                    <div class="product-card__prices-new">15.99р</div>
+                    <div class="product-card__prices-old">25.90р</div>
+                  </div>
+                  <h5 class="product-card__title">Название товара</h5>
+                  <button class="product-card__buy">В корзину</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- !CARD PREVIEW MODAL-->
+          <div
+            class="modal fade"
+            id="productModal"
+            tabindex="-1"
+            aria-labelledby="productModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel">Название товара</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Закрыть"
+                  ></button>
+                </div>
+                <div class="modal-body d-flex">
+                  <img src="./images/product-img.png" alt="Товар" class="product-modal__image" />
+                  <div class="product-modal__info ms-4">
+                    <p class="product-modal__description">
+                      Описание товара. Здесь можно написать основные характеристики.
+                    </p>
+                    <p class="product-modal__price">$49.99</p>
+                    <button class="product-modal__add-to-cart">Добавить в корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- !CART MODAL -->
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="cartModal"
+            tabindex="-1"
+            aria-labelledby="cartModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cartModalLabel">Ваша корзина</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Cart Items -->
+                  <div class="cart-items">
+                    <div class="cart-item">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__img">
+                          <img src="./images/product-img.png" alt="product" />
+                        </a>
+                        <div class="cart-item__details">
+                          <h6 class="cart-item__title">Название товара</h6>
+                          <p class="cart-item__price">15.99р</p>
+                        </div>
+                      </div>
+                      <div class="cart-item__quantity">
+                        <button class="cart-item__decrease"></button>
+                        <span class="cart-item__quantity-value">1</span>
+                        <button class="cart-item__increase"></button>
+                      </div>
+                      <div class="cart-item__price-wrapper">
+                        <div class="cart-item__price">15.99р</div>
+                      </div>
+                      <button class="cart-item__remove"></button>
+                    </div>
+
+                    <div class="cart-item">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__img">
+                          <img src="./images/product-img.png" alt="product" />
+                        </a>
+                        <div class="cart-item__details">
+                          <h6 class="cart-item__title">Название товара</h6>
+                          <p class="cart-item__price">15.99р</p>
+                        </div>
+                      </div>
+                      <div class="cart-item__quantity">
+                        <button class="cart-item__decrease"></button>
+                        <span class="cart-item__quantity-value">1</span>
+                        <button class="cart-item__increase"></button>
+                      </div>
+                      <div class="cart-item__price-wrapper">
+                        <div class="cart-item__price">15.99р</div>
+                      </div>
+                      <button class="cart-item__remove"></button>
+                    </div>
+
+                    <div class="cart-item">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__img">
+                          <img src="./images/product-img.png" alt="product" />
+                        </a>
+                        <div class="cart-item__details">
+                          <h6 class="cart-item__title">Название товара</h6>
+                          <p class="cart-item__price">15.99р</p>
+                        </div>
+                      </div>
+                      <div class="cart-item__quantity">
+                        <button class="cart-item__decrease"></button>
+                        <span class="cart-item__quantity-value">1</span>
+                        <button class="cart-item__increase"></button>
+                      </div>
+                      <div class="cart-item__price-wrapper">
+                        <div class="cart-item__price">15.99р</div>
+                      </div>
+                      <button class="cart-item__remove"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <p class="fs-4 fw-bold">Итого: 15.99р</p>
+                  <button type="button" class="order-button">Заказать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

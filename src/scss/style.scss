@@ -1,1 +1,23 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import './variables.scss';
+@import './mixins.scss';
+@import './header.scss';
+@import './main-page.scss';
+@import './swiper.scss';
+@import './cart.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+  position: relative;
+}

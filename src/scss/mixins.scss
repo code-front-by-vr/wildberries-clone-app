@@ -1,0 +1,23 @@
+@mixin product-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@mixin discount-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $discount-color;
+}
+
+@mixin buy-button {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-color: $main-color;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+}
