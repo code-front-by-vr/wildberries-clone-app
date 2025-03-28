@@ -1,7 +1,9 @@
 import {
     currentDiscount,
     data,
+    cart,
     productContainerElement,
+    cartIconElement,
     previewModal
 } from './variables.js'
 
@@ -38,9 +40,10 @@ function addPreviewListeners() {
     })
 }
 
-function openPreviewModal({ title, image, price, description }) {
+function openPreviewModal({ id, title, image, price, description }) {
     const discountedPrice = calcDiscountedPrice(price, currentDiscount)
     // Fill modal fields with product data
+    document.querySelector('#productModal').dataset.productId = id
     document.querySelector('#productModalLabel').textContent = title
     document.querySelector('.product-modal__image').src = image
     document.querySelector('.product-modal__description').textContent = description
@@ -78,7 +81,7 @@ function buildProductCard({ id, title, image: url, price, category, discount = c
                 <h5 class="product-card__title">${title}</h5>
                 <div>
                     <div class="product-card__category">${category}</div>
-                    <button class="product-card__buy">В корзину</button>
+                    <button data-role="add-to-cart" class="buy-button">В корзину</button>
                 </div>
             </div>
             </div>
@@ -86,4 +89,18 @@ function buildProductCard({ id, title, image: url, price, category, discount = c
     `
 }
 
-export { renderProducts, fetchProducts }
+function updateCartIcon() {
+    cartIconElement.textContent = cart.length
+    if (cart.length > 0) {
+        cartIconElement.classList.remove('d-none')
+    } else {
+        cartIconElement.classList.add('d-none')
+    }
+}
+
+function updateButtonStyle(button) {
+    button.classList.add('buy-button-active');
+    button.textContent = 'В корзине';
+}
+
+export { renderProducts, fetchProducts, updateCartIcon, updateButtonStyle }

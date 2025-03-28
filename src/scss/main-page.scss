@@ -118,29 +118,55 @@
       text-decoration: line-through;
     }
   }
-  &__buy {
-    @include buy-button;
-    width: 100%;
+  // &__buy {
+  //   @include buy-button;
+  //   width: 100%;
+  //   &:hover {
+  //     background-color: $hover-color;
+  //   }
+  //   &:active {
+  //     transition: transform 0.1s;
+  //     transform: scale(0.97);
+  //   }
+  //   &::before {
+  //     content: '\f07a';
+  //     font-family: 'Font Awesome 5 Free';
+  //     margin-right: 0.5rem;
+  //     font-weight: 900;
+  //     font-size: 1rem;
+  //   }
+  //   &-active {
+  //     background-color: $active-button-bg;
+  //     color: $main-color;
+  //     &:hover {
+  //       background-color: $active-button-bg-hover;
+  //     }
+  //   }
+  // }
+}
+
+.buy-button {
+  @include buy-button;
+  width: 100%;
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:active {
+    transition: transform 0.1s;
+    transform: scale(0.97);
+  }
+  &::before {
+    content: '\f07a';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 0.5rem;
+    font-weight: 900;
+    font-size: 1rem;
+  }
+  &-active {
+    background-color: $active-button-bg;
+    color: $main-color;
     &:hover {
-      background-color: $hover-color;
-    }
-    &:active {
-      transition: transform 0.1s;
-      transform: scale(0.97);
-    }
-    &::before {
-      content: '\f07a';
-      font-family: 'Font Awesome 5 Free';
-      margin-right: 0.5rem;
-      font-weight: 900;
-      font-size: 1rem;
-    }
-    &-active {
-      background-color: $active-button-bg;
-      color: $main-color;
-      &:hover {
-        background-color: $active-button-bg-hover;
-      }
+      background-color: $active-button-bg-hover;
     }
   }
 }
@@ -168,24 +194,5 @@
     font-weight: bold;
     color: $discount-color;
     margin: 1rem 0;
-  }
-
-  &__add-to-cart {
-    @include buy-button;
-    width: 100%;
-    &:hover {
-      background-color: $hover-color;
-    }
-    &:active {
-      transition: transform 0.1s;
-      transform: scale(0.97);
-    }
-    &::before {
-      content: '\f07a';
-      font-family: 'Font Awesome 5 Free';
-      margin-right: 0.5rem;
-      font-weight: 900;
-      font-size: 1rem;
-    }
   }
 }

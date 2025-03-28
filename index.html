@@ -31,7 +31,8 @@
         <div class="basket">
           <a href="#" class="basket__link">
             <img src="./icons/basket-icon.svg" alt="basket-icon" />
-            <span>Корзина</span>
+            <span class="basket__text">Корзина</span>
+            <span class="basket__notify d-none">0</span>
           </a>
         </div>
       </div>
@@ -70,150 +71,13 @@
         </div>
 
         <div class="main-page__content-wrapper">
-          <div class="main-page__content">
-            <!-- <article class="main-page__product product-card">
-              <div class="product-card__wrapper">
-                <div class="product-card__img">
-                  <div class="product-card__img-wrapper">
-                    <img src="./images/product-img.png" alt="product-img" />
-                  </div>
-                  <button
-                    class="product-card__button product-card__button-preview"
-                    data-bs-toggle="modal"
-                    data-bs-target="#productModal"
-                  >
-                    Быстрый просмотр
-                  </button>
-                  <span class="product-card__discount">-15%</span>
-                </div>
-                <div class="product-card__info">
-                  <div class="product-card__prices">
-                    <div class="product-card__prices-new">15.99р</div>
-                    <div class="product-card__prices-old">25.90р</div>
-                  </div>
-                  <h5 class="product-card__title">Название товара</h5>
-                  <div class="product-card__category">Штаны</div>
-                  <button class="product-card__buy product-card__buy-active">В корзину</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="main-page__product product-card">
-              <div class="product-card__wrapper">
-                <div class="product-card__img">
-                  <div class="product-card__img-wrapper">
-                    <img src="./images/product-img.png" alt="product-img" />
-                  </div>
-                  <button
-                    class="product-card__button product-card__button-preview"
-                    data-bs-toggle="modal"
-                    data-bs-target="#productModal"
-                  >
-                    Быстрый просмотр
-                  </button>
-                  <span class="product-card__discount">-15%</span>
-                </div>
-                <div class="product-card__info">
-                  <div class="product-card__prices">
-                    <div class="product-card__prices-new">15.99р</div>
-                    <div class="product-card__prices-old">25.90р</div>
-                  </div>
-                  <h5 class="product-card__title">Название товара</h5>
-                  <div class="product-card__category">Штаны</div>
-                  <button class="product-card__buy product-card__buy-active">В корзину</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="main-page__product product-card">
-              <div class="product-card__wrapper">
-                <div class="product-card__img">
-                  <div class="product-card__img-wrapper">
-                    <img src="./images/product-img.png" alt="product-img" />
-                  </div>
-                  <button
-                    class="product-card__button product-card__button-preview"
-                    data-bs-toggle="modal"
-                    data-bs-target="#productModal"
-                  >
-                    Быстрый просмотр
-                  </button>
-                  <span class="product-card__discount">-15%</span>
-                </div>
-                <div class="product-card__info">
-                  <div class="product-card__prices">
-                    <div class="product-card__prices-new">15.99р</div>
-                    <div class="product-card__prices-old">25.90р</div>
-                  </div>
-                  <h5 class="product-card__title">Название товара</h5>
-                  <div class="product-card__category">Штаны</div>
-                  <button class="product-card__buy product-card__buy-active">В корзину</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="main-page__product product-card">
-              <div class="product-card__wrapper">
-                <div class="product-card__img">
-                  <div class="product-card__img-wrapper">
-                    <img src="./images/product-img.png" alt="product-img" />
-                  </div>
-                  <button
-                    class="product-card__button product-card__button-preview"
-                    data-bs-toggle="modal"
-                    data-bs-target="#productModal"
-                  >
-                    Быстрый просмотр
-                  </button>
-                  <span class="product-card__discount">-15%</span>
-                </div>
-                <div class="product-card__info">
-                  <div class="product-card__prices">
-                    <div class="product-card__prices-new">15.99р</div>
-                    <div class="product-card__prices-old">25.90р</div>
-                  </div>
-                  <h5 class="product-card__title">Название товара</h5>
-                  <div class="product-card__category">Штаны</div>
-                  <button class="product-card__buy product-card__buy-active">В корзину</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="main-page__product product-card">
-              <div class="product-card__wrapper">
-                <div class="product-card__img">
-                  <div class="product-card__img-wrapper">
-                    <img src="./images/product-img.png" alt="product-img" />
-                  </div>
-                  <button
-                    class="product-card__button product-card__button-preview"
-                    data-bs-toggle="modal"
-                    data-bs-target="#productModal"
-                  >
-                    Быстрый просмотр
-                  </button>
-                  <span class="product-card__discount">-15%</span>
-                </div>
-                <div class="product-card__info">
-                  <div class="product-card__prices">
-                    <div class="product-card__prices-new">15.99р</div>
-                    <div class="product-card__prices-old">25.90р</div>
-                  </div>
-                  <h5 class="product-card__title">Название товара</h5>
-                  <div class="product-card__category">Штаны</div>
-                  <button class="product-card__buy product-card__buy-active">В корзину</button>
-                </div>
-              </div>
-            </article>
-          </div> -->
-          </div>
+          <div class="main-page__content"></div>
           <!-- !CARD PREVIEW MODAL-->
           <div
             class="modal fade"
             id="productModal"
             tabindex="-1"
             aria-labelledby="productModalLabel"
-            aria-hidden="true"
           >
             <div class="modal-dialog modal-lg modal-dialog-centered">
               <div class="modal-content">
@@ -233,7 +97,7 @@
                       Описание товара. Здесь можно написать основные характеристики.
                     </p>
                     <p class="product-modal__price">$49.99</p>
-                    <button class="product-modal__add-to-cart">Добавить в корзину</button>
+                    <button data-role="add-to-cart" class="buy-button">Добавить в корзину</button>
                   </div>
                 </div>
               </div>

@@ -32,6 +32,7 @@
 .basket {
   align-self: flex-end;
   &__link {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,11 +45,27 @@
       width: 1.5rem;
       height: 1.5rem;
     }
-    span {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.875rem;
-      font-weight: 400;
-      line-height: 1.4;
-    }
+  }
+  &__text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  &__notify {
+    color: #fff;
+    text-align: center;
+    background: #f55123;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.625rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -0.375rem;
+    right: -0.125rem;
   }
 }
