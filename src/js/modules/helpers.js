@@ -1,4 +1,9 @@
-import { productContainerElement } from './variables.js'
+import {
+    currentDiscount,
+    data,
+    productContainerElement,
+    previewModal
+} from './variables.js'
 
 async function fetchProducts() {
     try {
@@ -6,10 +11,11 @@ async function fetchProducts() {
         if (!response.ok) {
             throw new Error(`Ошибка загрузки: ${response.status}`)
         }
-        const products = await response.json()
-        renderProducts(products)
+        data.products = await response.json()
+        renderProducts(data.products)
+        addPreviewListeners()
     } catch (error) {
-        alert('Ошибка получения данных с сервера: ', error)
+        console.error('Ошибка получения данных с сервера: ', error)
     }
 }
 
@@ -19,15 +25,39 @@ function renderProducts(products) {
     productContainerElement.innerHTML = html
 }
 
+function addPreviewListeners() {
+    const previewButtonElements = document.querySelectorAll('.product-card__button-preview')
+    previewButtonElements.forEach(button => {
+        button.addEventListener('click', function ({ target }) {
+            const productId = target.closest('.product-card').dataset.id
+            const product = data.products.find(p => p.id == productId)
+            if (product) {
+                openPreviewModal(product)
+            }
+        })
+    })
+}
+
+function openPreviewModal({ title, image, price, description }) {
+    const discountedPrice = calcDiscountedPrice(price, currentDiscount)
+    // Fill modal fields with product data
+    document.querySelector('#productModalLabel').textContent = title
+    document.querySelector('.product-modal__image').src = image
+    document.querySelector('.product-modal__description').textContent = description
+    document.querySelector('.product-modal__price').textContent = `$${discountedPrice}`
+
+    previewModal.toggle()
+}
+
 function calcDiscountedPrice(price, discountPercentage) {
     const discount = (price * discountPercentage) / 100
     return (price - discount).toFixed(2)
 }
 
-function buildProductCard({ id, title, image: url, price, category, discount = 10 }) {
+function buildProductCard({ id, title, image: url, price, category, discount = currentDiscount }) {
     const discountedPrice = calcDiscountedPrice(price, discount)
     return `
-        <article data-id="${id}" class="main-page__product product-card">
+        <article class="main-page__product product-card" data-id="${id}">
             <div class="product-card__wrapper">
             <div class="product-card__img">
                 <div class="product-card__img-wrapper">
@@ -35,8 +65,6 @@ function buildProductCard({ id, title, image: url, price, category, discount = 1
                 </div>
                 <button
                 class="product-card__button product-card__button-preview"
-                data-bs-toggle="modal"
-                data-bs-target="#productModal"
                 >
                 Быстрый просмотр
                 </button>
@@ -58,4 +86,4 @@ function buildProductCard({ id, title, image: url, price, category, discount = 1
     `
 }
 
-export { fetchProducts }
+export { renderProducts, fetchProducts }

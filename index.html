@@ -13,11 +13,14 @@
     <header class="header">
       <div class="container header__wrapper">
         <div class="header__logo">
-          <a href="#"><img src="./icons/wildberries-logo.svg" alt="wildberries-logo" /></a>
+          <a href="#">
+            <img src="./icons/wildberries-logo.svg" alt="wildberries-logo" />
+          </a>
         </div>
         <div class="header__search-container">
           <form class="d-flex">
             <input
+              id="searchInput"
               class="header__search"
               type="search"
               placeholder="Найти на Fake-Wildberries..."
@@ -26,7 +29,7 @@
           </form>
         </div>
         <div class="basket">
-          <a href="#" class="basket__link" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <a href="#" class="basket__link">
             <img src="./icons/basket-icon.svg" alt="basket-icon" />
             <span>Корзина</span>
           </a>
@@ -203,7 +206,7 @@
               </div>
             </article>
           </div> -->
-
+          </div>
           <!-- !CARD PREVIEW MODAL-->
           <div
             class="modal fade"
